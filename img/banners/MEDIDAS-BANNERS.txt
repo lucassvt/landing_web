@@ -1,0 +1,54 @@
+===============================================
+LA MASCOTERA - MEDIDAS DE BANNERS PARA V2
+===============================================
+
+BANNERS LATERALES (CARRUSEL VERTICAL)
+-------------------------------------
+Nombre de archivos:
+- peluqueria.jpg
+- veterinaria.jpg
+- alimentos.jpg
+- accesorios.jpg
+
+Medidas: 280px x 400px (ancho x alto)
+Formato: JPG o PNG
+Orientación: Vertical
+
+Recomendaciones:
+- Fondo que contraste bien
+- Texto grande y legible
+- Imagen del servicio/producto destacado
+- Colores de marca (naranja, amarillo)
+- El texto de título aparece al hacer hover,
+  pero puedes incluir texto en la imagen
+
+
+BANNER FOOTER (CLUB LA MASCOTERA)
+---------------------------------
+Nombre de archivo:
+- club-lamascotera.jpg
+
+Medidas: 800px x 120px (ancho x alto)
+Formato: JPG o PNG
+Orientación: Horizontal
+
+Recomendaciones:
+- Promocionar beneficios del Club
+- Llamada a la acción clara
+- Logo del Club visible
+- Colores de marca
+
+
+RESUMEN DE ARCHIVOS NECESARIOS:
+===============================
+img/banners/
+├── peluqueria.jpg      (280x400px)
+├── veterinaria.jpg     (280x400px)
+├── alimentos.jpg       (280x400px)
+├── accesorios.jpg      (280x400px)
+└── club-lamascotera.jpg (800x120px)
+
+
+NOTA: Los carruseles laterales solo se muestran
+en pantallas de 1200px o más de ancho.
+En mobile y tablet, solo se ve el selector central.

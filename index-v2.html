@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Mascotera - Selecciona tu Región</title>
+    <link rel="stylesheet" href="css/styles-v2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header fijo que simula la tienda -->
+    <header class="main-header">
+        <!-- Barra superior con redes sociales -->
+        <div class="topbar">
+            <div class="topbar-content">
+                <div class="social-icons">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar principal -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <img src="assets/logo La Mascotera.png" alt="La Mascotera" class="navbar-logo">
+                <div class="search-bar">
+                    <input type="text" placeholder="¿Qué estás buscando?" disabled>
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </div>
+                <div class="navbar-icons">
+                    <div class="nav-icon">
+                        <i class="fa-regular fa-comments"></i>
+                        <span class="icon-label">Ayuda</span>
+                    </div>
+                    <div class="nav-icon">
+                        <i class="fa-regular fa-user"></i>
+                        <span class="icon-label">Mi cuenta</span>
+                    </div>
+                    <div class="nav-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="icon-label">Mi carrito</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Menú de categorías -->
+        <div class="menu-bar">
+            <div class="menu-content">
+                <span class="menu-item">Perros <i class="fa-solid fa-chevron-down"></i></span>
+                <span class="menu-item">Gatos <i class="fa-solid fa-chevron-down"></i></span>
+                <span class="menu-item">Otros <i class="fa-solid fa-chevron-down"></i></span>
+                <span class="menu-item">¡RECIEN LLEGADOS! <i class="fa-solid fa-chevron-down"></i></span>
+                <span class="menu-item">¡OFERTAS! <i class="fa-solid fa-chevron-down"></i></span>
+                <span class="menu-item">Club La Mascotera</span>
+                <span class="menu-item">Peluqueria</span>
+                <span class="menu-item">Sucursales</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <!-- Carrusel izquierdo -->
+        <aside class="carousel-side carousel-left">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselLeft">
+                    <div class="carousel-slide active">
+                        <img src="img/banners/peluqueria.jpg" alt="Peluquería Canina">
+                        <div class="slide-overlay">
+                            <span class="slide-title">Peluquería</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/banners/veterinaria.jpg" alt="Veterinaria">
+                        <div class="slide-overlay">
+                            <span class="slide-title">Veterinaria</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/banners/alimentos.jpg" alt="Alimentos Balanceados">
+                        <div class="slide-overlay">
+                            <span class="slide-title">Alimentos</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/banners/accesorios.jpg" alt="Accesorios">
+                        <div class="slide-overlay">
+                            <span class="slide-title">Accesorios</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots" id="dotsLeft"></div>
+            </div>
+        </aside>
+
+        <!-- Selector de región central -->
+        <section class="selector-section">
+            <div class="selector-container">
+                <div class="selector-content">
+                    <!-- Header -->
+                    <div class="selector-header">
+                        <img src="assets/logo La Mascotera.png" alt="La Mascotera" class="logo">
+                        <h2 class="selector-title">Seleccioná tu Región</h2>
+                        <p class="selector-subtitle">Elegí tu ubicación para ver productos y ofertas disponibles</p>
+                    </div>
+
+                    <!-- Regiones -->
+                    <div class="regiones-wrapper">
+                        <div class="region-group">
+                            <div class="region-cards">
+                                <button class="region-card" data-region="tucuman">
+                                    <i class="fa-solid fa-store region-icon"></i>
+                                    <span class="region-name">Tucumán</span>
+                                </button>
+
+                                <button class="region-card" data-region="salta_santiago">
+                                    <i class="fa-solid fa-store region-icon"></i>
+                                    <span class="region-name">Salta / Santiago</span>
+                                </button>
+
+                                <button class="region-card" data-region="neuquen">
+                                    <i class="fa-solid fa-store region-icon"></i>
+                                    <span class="region-name">Neuquén</span>
+                                </button>
+
+                                <button class="region-card" data-region="cordoba">
+                                    <i class="fa-solid fa-store region-icon"></i>
+                                    <span class="region-name">Córdoba</span>
+                                </button>
+
+                                <button class="region-card" data-region="mendoza">
+                                    <i class="fa-solid fa-store region-icon"></i>
+                                    <span class="region-name">Mendoza</span>
+                                </button>
+
+                                <button class="region-card" data-region="jujuy">
+                                    <i class="fa-solid fa-store region-icon"></i>
+                                    <span class="region-name">Jujuy</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Opción para resto del país -->
+                        <div class="region-group resto-pais">
+                            <button class="region-card region-card-envios" data-region="resto_pais">
+                                <i class="fa-solid fa-truck-fast region-icon"></i>
+                                <span class="region-name">Resto del país</span>
+                                <span class="region-desc">Envíos a todo Argentina</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Recordar selección -->
+                    <div class="remember-option">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="rememberRegion">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-label">Recordar mi selección</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrusel derecho -->
+        <aside class="carousel-side carousel-right">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselRight">
+                    <div class="carousel-slide active">
+                        <img src="img/banners/accesorios.jpg" alt="Accesorios">
+                        <div class="slide-overlay">
+                            <span class="slide-title">Accesorios</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/banners/alimentos.jpg" alt="Alimentos Balanceados">
+                        <div class="slide-overlay">
+                            <span class="slide-title">Alimentos</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/banners/veterinaria.jpg" alt="Veterinaria">
+                        <div class="slide-overlay">
+                            <span class="slide-title">Veterinaria</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/banners/peluqueria.jpg" alt="Peluquería Canina">
+                        <div class="slide-overlay">
+                            <span class="slide-title">Peluquería</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots" id="dotsRight"></div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer promocional -->
+    <footer class="promo-footer">
+        <div class="footer-content">
+            <a href="#" class="club-banner">
+                <img src="img/bannerhorizontal_club.png" alt="Club La Mascotera">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Toast de región guardada -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-message">Redirigiendo...</span>
+    </div>
+
+    <script src="js/app-v2.js"></script>
+</body>
+</html>

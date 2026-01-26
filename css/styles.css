@@ -1,0 +1,680 @@
+/* ========================================
+   LA MASCOTERA - SELECTOR DE REGIÓN
+   Mobile: Landing Page completa
+   Desktop: Modal sobre fondo
+======================================== */
+
+:root {
+    /* Colores principales - Ajustar según branding */
+    --primary-color: #FF6B35;
+    --primary-hover: #e55a2b;
+    --primary-light: #fff4f0;
+    --secondary-color: #2D3047;
+    --text-color: #333333;
+    --text-light: #666666;
+    --background-color: #f5f5f5;
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ========================================
+   MOBILE FIRST - Landing Page Completa
+======================================== */
+
+/* Ocultar fondo de desktop en mobile */
+.desktop-background {
+    display: none;
+}
+
+/* Contenedor principal - Ocupa toda la pantalla en mobile */
+.selector-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+}
+
+.selector-content {
+    width: 100%;
+    max-width: 620px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+}
+
+/* Header del selector */
+.selector-header {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.logo {
+    max-width: 140px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.selector-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.selector-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Contenedor de regiones */
+.regiones-wrapper {
+    margin-bottom: 15px;
+}
+
+.region-group {
+    margin-bottom: 10px;
+}
+
+.region-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+/* Tarjetas de región */
+.region-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 10px;
+    background: var(--white);
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+    font-size: 0.85rem;
+    text-align: center;
+    width: 100%;
+}
+
+.region-card:hover {
+    border-color: var(--primary-color);
+    background: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.region-card:active {
+    transform: translateY(0);
+}
+
+.region-card.selected {
+    border-color: var(--primary-color);
+    background: var(--primary-light);
+}
+
+.region-icon {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.region-name {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* Tarjeta de Resto del país */
+.resto-pais {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #ddd;
+}
+
+.region-card-envios {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px 14px;
+    background: linear-gradient(135deg, #fff9f5 0%, #fff 100%);
+    border-color: var(--primary-color);
+    border-style: dashed;
+}
+
+.region-card-envios .region-icon {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.region-card-envios .region-name {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.region-desc {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    margin-top: 2px;
+}
+
+/* Checkbox recordar */
+.remember-option {
+    margin-bottom: 12px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkmark {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.checkbox-container input:checked + .checkmark {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkbox-container input:checked + .checkmark::after {
+    content: '✓';
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.checkbox-label {
+    user-select: none;
+}
+
+/* Footer */
+.selector-footer {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.footer-text {
+    font-size: 0.75rem;
+    color: var(--text-light);
+}
+
+/* Toast notification */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--secondary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.toast-icon {
+    background: var(--primary-color);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.toast-message {
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   DESKTOP - Modal sobre fondo
+======================================== */
+
+@media (min-width: 768px) {
+    /* Mostrar fondo de desktop que simula la tienda */
+    .desktop-background {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        overflow: hidden;
+        background-color: #f5f5f5;
+    }
+
+    /* Barra superior amarilla con redes */
+    .fake-topbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 28px;
+        background: #F5A623;
+        z-index: 1;
+    }
+
+    .fake-topbar-content {
+        width: 100%;
+        padding: 0 30px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .fake-social-icons {
+        display: flex;
+        gap: 14px;
+    }
+
+    .fake-social-icon,
+    .fake-social-icons i {
+        color: #333;
+        font-size: 14px;
+    }
+
+    /* Navbar principal */
+    .fake-navbar {
+        position: absolute;
+        top: 28px;
+        left: 0;
+        width: 100%;
+        height: 90px;
+        background: var(--white);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .fake-navbar-content {
+        width: 100%;
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .fake-navbar-logo {
+        height: 75px;
+        width: auto;
+        flex-shrink: 0;
+    }
+
+    .fake-search-bar {
+        flex: 1;
+        max-width: 650px;
+        position: relative;
+    }
+
+    .fake-search-bar input {
+        width: 100%;
+        padding: 12px 50px 12px 20px;
+        border: 2px solid #333;
+        border-radius: 8px;
+        font-size: 14px;
+        font-family: inherit;
+        background: var(--white);
+    }
+
+    .fake-search-icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #666;
+    }
+
+    .fake-navbar-icons {
+        display: flex;
+        gap: 40px;
+        flex-shrink: 0;
+    }
+
+    .fake-nav-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        color: #333;
+    }
+
+    .fake-nav-icon i {
+        font-size: 26px;
+        color: #333;
+    }
+
+    .fake-icon-label {
+        font-size: 12px;
+        color: #666;
+    }
+
+    /* Menú de categorías */
+    .fake-menu {
+        position: absolute;
+        top: 118px;
+        left: 0;
+        width: 100%;
+        height: 45px;
+        background: var(--white);
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .fake-menu-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        gap: 30px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .fake-menu-item {
+        font-size: 13px;
+        color: #333;
+        font-weight: 500;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .fake-menu-item i {
+        font-size: 10px;
+        color: #666;
+    }
+
+    /* Slider de imágenes */
+    .fake-slider {
+        position: absolute;
+        top: 163px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 163px - 120px);
+        overflow: hidden;
+    }
+
+    .fake-slider-track {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .fake-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .fake-slide.active {
+        opacity: 1;
+    }
+
+    .fake-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Overlay oscuro sobre todo */
+    .background-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 120px);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+
+    /* Footer con Club La Mascotera (sin overlay) */
+    .fake-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        z-index: 3;
+        background: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fake-footer img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    /* Modal centrado - más abajo para ver el navbar */
+    .selector-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background: transparent;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 180px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .selector-content {
+        max-width: 700px;
+        padding: 25px 30px;
+        border-radius: 16px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        animation: modalFadeIn 0.4s ease;
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+    }
+
+    @keyframes modalFadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95) translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    /* Grid de 3 columnas en desktop */
+    .region-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .region-card {
+        padding: 12px 8px;
+        gap: 5px;
+    }
+
+    .region-icon {
+        font-size: 1.1rem;
+    }
+
+    .region-name {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        max-width: 130px;
+        margin-bottom: 10px;
+    }
+
+    .selector-header {
+        margin-bottom: 15px;
+    }
+
+    .selector-title {
+        font-size: 1.1rem;
+    }
+
+    .selector-subtitle {
+        font-size: 0.75rem;
+    }
+}
+
+/* ========================================
+   DESKTOP GRANDE
+======================================== */
+
+@media (min-width: 1024px) {
+    .selector-content {
+        max-width: 750px;
+        padding: 25px 35px;
+    }
+
+    .bg-logo {
+        max-width: 300px;
+    }
+
+    .bg-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* ========================================
+   ANIMACIONES Y EFECTOS
+======================================== */
+
+/* Efecto ripple en botones */
+.region-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.region-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 107, 53, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.region-card:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Loading state */
+.region-card.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.region-card.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* ========================================
+   ACCESIBILIDAD
+======================================== */
+
+.region-card:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.region-card:focus:not(:focus-visible) {
+    outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
