@@ -3,17 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Mascotera - Selecciona tu Región</title>
+    <title>La Mascotera | Tienda de Mascotas Online - Alimentos, Accesorios y Peluquería</title>
+    <meta name="description" content="La Mascotera es tu tienda de mascotas online en Argentina. Encontrá alimentos balanceados, accesorios, juguetes y peluquería canina con envíos a todo el país. Sucursales en Tucumán, Salta, Neuquén, Córdoba, Mendoza y Jujuy.">
+    <meta name="keywords" content="tienda de mascotas, alimentos para perros, alimentos para gatos, accesorios mascotas, peluquería canina, tienda mascotas online Argentina, La Mascotera">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="La Mascotera">
+    <meta name="theme-color" content="#FF6B35">
+    <link rel="canonical" href="https://lamascotera.com.ar/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lamascotera.com.ar/">
+    <meta property="og:title" content="La Mascotera | Tienda de Mascotas Online en Argentina">
+    <meta property="og:description" content="Tu tienda de mascotas online. Alimentos balanceados, accesorios, juguetes y peluquería canina con envíos a todo el país.">
+    <meta property="og:image" content="https://lamascotera.com.ar/assets/logo La Mascotera.png">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="La Mascotera">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La Mascotera | Tienda de Mascotas Online en Argentina">
+    <meta name="twitter:description" content="Tu tienda de mascotas online. Alimentos balanceados, accesorios, juguetes y peluquería canina con envíos a todo el país.">
+    <meta name="twitter:image" content="https://lamascotera.com.ar/assets/logo La Mascotera.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo La Mascotera.png">
+    <link rel="apple-touch-icon" href="assets/logo La Mascotera.png">
+
+    <!-- Preload imagen hero para mejor rendimiento -->
+    <link rel="preload" as="image" href="img/Diversion.png">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Structured Data - JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "PetStore",
+        "name": "La Mascotera",
+        "url": "https://lamascotera.com.ar",
+        "logo": "https://lamascotera.com.ar/assets/logo La Mascotera.png",
+        "description": "Tienda de mascotas online en Argentina. Alimentos balanceados, accesorios, juguetes y peluquería canina con envíos a todo el país.",
+        "image": "https://lamascotera.com.ar/assets/logo La Mascotera.png",
+        "areaServed": [
+            {"@type": "State", "name": "Tucumán"},
+            {"@type": "State", "name": "Salta"},
+            {"@type": "State", "name": "Santiago del Estero"},
+            {"@type": "State", "name": "Neuquén"},
+            {"@type": "State", "name": "Córdoba"},
+            {"@type": "State", "name": "Mendoza"},
+            {"@type": "State", "name": "Jujuy"}
+        ],
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceType": "Envíos a todo el país"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Productos para mascotas",
+            "itemListElement": [
+                {"@type": "OfferCatalog", "name": "Alimentos para perros"},
+                {"@type": "OfferCatalog", "name": "Alimentos para gatos"},
+                {"@type": "OfferCatalog", "name": "Accesorios para mascotas"},
+                {"@type": "OfferCatalog", "name": "Peluquería canina"}
+            ]
+        }
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip to content - Accesibilidad -->
+    <a href="#selector" class="skip-to-content">Ir al contenido principal</a>
+
+    <!-- H1 SEO - Título principal de la página -->
+    <h1 class="seo-title">La Mascotera - Tienda de Mascotas Online en Argentina</h1>
+
     <!-- Fondo para desktop (simula la tienda) -->
-    <div class="desktop-background">
+    <div class="desktop-background" aria-hidden="true">
         <!-- Barra superior con redes sociales -->
         <div class="fake-topbar">
             <div class="fake-topbar-content">
@@ -68,10 +139,10 @@
         <div class="fake-slider">
             <div class="fake-slider-track">
                 <div class="fake-slide active">
-                    <img src="img/Diversion.png" alt="Diversión">
+                    <img src="img/Diversion.png" alt="Productos y diversión para tu mascota - La Mascotera" width="1920" height="800" fetchpriority="high">
                 </div>
                 <div class="fake-slide">
-                    <img src="img/Corte.png" alt="Corte">
+                    <img src="img/Corte.png" alt="Peluquería y corte canino profesional - La Mascotera" width="1920" height="800" loading="lazy">
                 </div>
             </div>
         </div>
@@ -81,51 +152,51 @@
 
         <!-- Footer con Club La Mascotera (sin overlay) -->
         <div class="fake-footer">
-            <img src="img/bannerhorizontal2_club.png" alt="Club La Mascotera">
+            <img src="img/bannerhorizontal2_club.png" alt="Club La Mascotera - Programa de beneficios para dueños de mascotas" width="800" height="120" loading="lazy">
         </div>
     </div>
 
     <!-- Contenedor principal - Landing en mobile / Modal en desktop -->
-    <div class="selector-container">
+    <main id="selector" class="selector-container" role="main">
         <div class="selector-content">
             <!-- Header -->
             <div class="selector-header">
-                <img src="assets/logo La Mascotera.png" alt="La Mascotera" class="logo">
+                <img src="assets/logo La Mascotera.png" alt="La Mascotera - Tienda de mascotas online" class="logo" width="200" height="80">
                 <h2 class="selector-title">Seleccioná tu Región</h2>
-                <p class="selector-subtitle">Elegí tu ubicación para ver productos y ofertas disponibles</p>
+                <p class="selector-subtitle">Elegí tu ubicación para ver productos y ofertas disponibles en tu zona</p>
             </div>
 
             <!-- Regiones -->
-            <div class="regiones-wrapper">
+            <nav class="regiones-wrapper" aria-label="Selección de región">
                 <div class="region-group">
                     <div class="region-cards">
-                        <button class="region-card" data-region="tucuman">
-                            <i class="fa-solid fa-store region-icon"></i>
+                        <button class="region-card" data-region="tucuman" aria-label="Tienda La Mascotera en Tucumán">
+                            <i class="fa-solid fa-store region-icon" aria-hidden="true"></i>
                             <span class="region-name">Tucumán</span>
                         </button>
 
-                        <button class="region-card" data-region="salta_santiago">
-                            <i class="fa-solid fa-store region-icon"></i>
+                        <button class="region-card" data-region="salta_santiago" aria-label="Tienda La Mascotera en Salta y Santiago del Estero">
+                            <i class="fa-solid fa-store region-icon" aria-hidden="true"></i>
                             <span class="region-name">Salta / Santiago</span>
                         </button>
 
-                        <button class="region-card" data-region="neuquen">
-                            <i class="fa-solid fa-store region-icon"></i>
+                        <button class="region-card" data-region="neuquen" aria-label="Tienda La Mascotera en Neuquén">
+                            <i class="fa-solid fa-store region-icon" aria-hidden="true"></i>
                             <span class="region-name">Neuquén</span>
                         </button>
 
-                        <button class="region-card" data-region="cordoba">
-                            <i class="fa-solid fa-store region-icon"></i>
+                        <button class="region-card" data-region="cordoba" aria-label="Tienda La Mascotera en Córdoba">
+                            <i class="fa-solid fa-store region-icon" aria-hidden="true"></i>
                             <span class="region-name">Córdoba</span>
                         </button>
 
-                        <button class="region-card" data-region="mendoza">
-                            <i class="fa-solid fa-store region-icon"></i>
+                        <button class="region-card" data-region="mendoza" aria-label="Tienda La Mascotera en Mendoza">
+                            <i class="fa-solid fa-store region-icon" aria-hidden="true"></i>
                             <span class="region-name">Mendoza</span>
                         </button>
 
-                        <button class="region-card" data-region="jujuy">
-                            <i class="fa-solid fa-store region-icon"></i>
+                        <button class="region-card" data-region="jujuy" aria-label="Tienda La Mascotera en Jujuy">
+                            <i class="fa-solid fa-store region-icon" aria-hidden="true"></i>
                             <span class="region-name">Jujuy</span>
                         </button>
                     </div>
@@ -133,13 +204,13 @@
 
                 <!-- Opción para resto del país -->
                 <div class="region-group resto-pais">
-                    <button class="region-card region-card-envios" data-region="resto_pais">
-                        <i class="fa-solid fa-truck-fast region-icon"></i>
+                    <button class="region-card region-card-envios" data-region="resto_pais" aria-label="Envíos a todo Argentina - Resto del país">
+                        <i class="fa-solid fa-truck-fast region-icon" aria-hidden="true"></i>
                         <span class="region-name">Resto del país</span>
                         <span class="region-desc">Envíos a todo Argentina</span>
                     </button>
                 </div>
-            </div>
+            </nav>
 
             <!-- Recordar selección -->
             <div class="remember-option">
@@ -155,11 +226,11 @@
                 <p class="footer-text">Envíos a todo el país</p>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- Toast de región guardada -->
-    <div class="toast" id="toast">
-        <span class="toast-icon">✓</span>
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <span class="toast-icon" aria-hidden="true">✓</span>
         <span class="toast-message">Redirigiendo...</span>
     </div>
 
